@@ -1,0 +1,5 @@
+{
+  "name": "Instagram Gallery Aggregator",
+  "description": "A clean, modern, full-screen, tiled gallery that shows recent Instagram posts, designed for unattended display (kiosk mode). Features configurable animations like continuous scrolling, incremental post fading, and random post highlighting.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  frontend:
+    # Build the image from the Dockerfile in the current directory
+    build: .
+    container_name: instagram_gallery_frontend
+    ports:
+      # Map port 8080 on the host to port 80 in the container
+      - "8080:80"
+    volumes:
+      # Mount the current directory into the container's web root
+      # Changes to your local files will be reflected inside the container
+      - ./:/usr/share/nginx/html
+    restart: unless-stopped
+    # The 'env_file' directive is included for when you build a backend service.
+    # Nginx itself doesn't use these, but it's good practice to have it here.
+    # env_file:
+    #   - .env
+
+networks:
+  default:
+    name: instagram-gallery-net
